@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* <<<<<<<<<<<<<<<<< Header and Nav Styling >>>>>>>>>>>>>>>>>>>>>> */
+header {
+  background-color: #a00028;
+  height: 100px;
+  width: 100%;
+}
+
+div.searchBar a {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background-color: #a00028;
+  padding: 5px;
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+  width: 540px;
+  background-color: #a00028;
+  border: none;
+  color: white;
+}
+
+.navBar {
+  background-color: #cc0033;
+  height: 60px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.logo {
+  display: flex;
+  background-color: #303030;
+  float: left;
+  height: 40px;
+  width: 160px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#searchGlass {
+  display: flex;
+  height: 30px;
+  width: 30px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<< Jumbotron styling >>>>>>>>>>>>>>>>>>> */
+
+.jumbotron {
+  background-image: linear-gradient(90deg, #000000, transparent, #000000),
+  url("./images/B&W_bg.jpg");
+
+  background-size: cover;
+  background-position: 0 77%;
+  height: 300px;
+  width: 100%;
+  padding: 25px;
+  z-index: -999;
+}
+
+.jumboContent {
+  display: flex;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
+
+.discountContent {
+  width: 50%;
+  color: #fefefe;
+}
+
+#discount {
+  font-weight: bold;
+  font-size: 46px;
+}
+
+#discountHeader {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#peak {
+  width: 380px;
+  height: 225px;
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< Card Styling >>>>>>>>>>>>>>>>>>>>*/
+
+.cardElements {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: -50px;
+  margin-bottom: 15px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid #fefefe;
+  border-radius: 10px;
+  color: white;
+  font-size: 36px;
+  font-weight: lighter;
+  width: 30%;
+  height: 200px;
+  box-shadow: 0 3px 6px #ececec, 0 3px 6px #ececec;
+}
+
+#box-a {
+  background-color: #35D3B4;
+}
+
+#box-b {
+  background-color: #1B2191;
+}
+
+#box-c {
+  background-color: #D822EE;
+}
+
+#box-d {
+  background-color: teal;
+  display: none;
+}
+
+/* <<<<<<<<<<<<<< Footer Styling >>>>>>>>>>>>>>>> */
+
+footer {
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  height: 280px;
+  background-color: #272727;
+  color: white;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+div.footerLinks > a {
+  cursor: pointer;
+  font-size: 12px;
+  margin: 4px 0px;
+}
+
+/* <<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>>> */
+
+@media only screen and (max-width: 1024px) {
+
+  .searchBar{
+    justify-content: left;
+    padding-left: 10px;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  .cardElements{
+    flex-wrap: wrap;
+    margin-top: 35px;
+  }
+
+  .card {
+    width: 40%;
+    margin: 10px;
+  }
+
+  footer {
+    height: 100px;
+  }
+  
+  #peak {
+    transform: translate(0, 100px);
+  }
+
+}
+
+@media only screen and (max-width: 760px) {
+  #discount {
+    font-size: 40px;
+  }
+  
+  #discountHeader {
+    font-size: 18px;
+  }
+
+  #discountDetail {
+    font-size: 14px;
+  }
+
+  .jumbotron {
+    padding-bottom: 0;
+  }
+
+  #peak {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+
+  .jumbotron {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .discountContent {
+    min-width: 190px;
+  }
+
+  #peak {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  
+  footer {
+    position: unset;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+.jumboContent {
+  flex-direction: column;
+}
+
+.discountContent {
+  width: 100%;
+}
+.peakImg{
+  display: flex;
+  justify-content: center;
+}
+
+#peak {
+  transform: unset;
+}
+
+.box-text {
+  display: none;
+}
+
+.cardElements {
+  margin-top: 17%;
+}
+
+.card {
+  flex-direction: column;
+  width: 80%;
+  height: 55px;
+  margin: 5px;
+  border: none;
+  
+}
+
+#box-d {
+  display: unset;
+}
+
+footer {
+  flex-direction: column;
+  height: 225px;
+}
+
+}
