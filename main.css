@@ -16,6 +16,7 @@ html, body {
 }
 
 /* <<<<<<<<<<<<<<<<< Header and Nav Styling >>>>>>>>>>>>>>>>>>>>>> */
+
 header {
   background-color: #a00028;
   height: 100px;
@@ -192,6 +193,10 @@ div.footerLinks > a {
     width: 60%;
   }
 
+  #peak {
+    transform: translate(0, 100px);
+  }
+
   .cardElements{
     flex-wrap: wrap;
     margin-top: 35px;
@@ -205,14 +210,17 @@ div.footerLinks > a {
   footer {
     height: 100px;
   }
-  
-  #peak {
-    transform: translate(0, 100px);
-  }
 
 }
 
+/* <<<<<<<<<<<<< Responsive Helper between break points >>>>>>>>>>>>>>>>>*/
+
 @media only screen and (max-width: 760px) {
+
+  .jumbotron {
+    padding-bottom: 0;
+  }
+
   #discount {
     font-size: 40px;
   }
@@ -223,10 +231,6 @@ div.footerLinks > a {
 
   #discountDetail {
     font-size: 14px;
-  }
-
-  .jumbotron {
-    padding-bottom: 0;
   }
 
   #peak {
@@ -252,16 +256,18 @@ div.footerLinks > a {
 }
 
 @media only screen and (max-width: 500px) {
-  
-  footer {
-    position: unset;
-  }
-
+ 
   .logo {
     width: 80px;
   }
 
+  footer {
+    position: unset;
+  }
+
 }
+
+/* <<<<<<<<<<<<< Mobile Responsive >>>>>>>>>>>>>>>>>*/
 
 @media only screen and (max-width: 400px) {
 .jumboContent {
